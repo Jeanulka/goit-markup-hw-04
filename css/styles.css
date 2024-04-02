@@ -121,13 +121,13 @@ section {
     align-items: center;
 }
 
+.header .logo {
+    margin-right: 93px;
+}
+
 .nav-menu-list,
 .nav-contacts-list {
     display: flex;
-}
-
-.header .logo {
-    margin-right: 93px;
 }
 
 .nav-menu-list .item:not(:last-child) {
@@ -136,7 +136,6 @@ section {
 
 .nav-contacts-list {
     margin-left: auto;
-    align-items: center;
 }
 
 .nav-contacts-list .item:not(:last-child) {
@@ -151,20 +150,26 @@ section {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.28px;
-}
-
-.nav-icons {
-    margin-right: 10px;
-    fill: var(--text-color);
-}
-
-.nav-contacts-link {
-    color: var(--text-color);
-
+    align-items: center;
 }
 
 .nav-menu-link {
     color: var(--title-color);
+}
+
+.nav-menu-link:focus,
+.nav-menu-link:hover,
+.nav-menu-link:active {
+    color: var(--primary-color);
+}
+
+.nav-contacts-link {
+    color: var(--text-color);
+}
+
+.icon-mail,
+.icon-phone {
+    margin-right: 10px;
 }
 
 .nav-contacts-link:focus,
@@ -173,15 +178,14 @@ section {
     color: var(--primary-color);
 }
 
-.nav-contacts-link:focus .nav-icons,
-.nav-contacts-link:hover .nav-icons {
+.nav-contacts-link:focus .icon-mail,
+.nav-contacts-link:hover .icon-mail {
     fill: var(--primary-color);
 }
 
-.nav-menu-link:focus,
-.nav-menu-link:hover,
-.nav-menu-link:active {
-    color: var(--primary-color);
+.nav-contacts-link:focus .icon-phone,
+.nav-contacts-link:hover .icon-phone {
+    fill: var(--primary-color);
 }
 
 .current-page {
@@ -191,8 +195,19 @@ section {
 
 /* Section Hero */
 .hero {
-    background: url(../images/hero/Hero-Img.jpg) no-repeat center;
+    /* max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto; */
+
+    background-color: #C4C4C4;
+    ;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)),
+        url(../images/hero/Hero-Img.jpg);
+    background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+
     padding-top: 200px;
     padding-bottom: 200px;
 
@@ -273,20 +288,20 @@ section {
     margin-right: 30px;
 }
 
-.features-list-icon {
-    padding-top: 25px;
-    padding-right: 100px;
-    padding-bottom: 25px;
-    padding-left: 100px;
-    border-radius: 4px;
+.features-list-item .icon {
+    display: flex;
+    height: 120px;
     margin-bottom: 30px;
+    border-radius: 4px;
     background-color: var(--background-third-color);
 }
 
-.features .icon-item {
-    display: block;
+.icon-antenna,
+.icon-clock,
+.icon-diagram,
+.icon-astronaut {
+    margin: auto;
 }
-
 
 /* Section What we do */
 .what-we-do .list {
@@ -391,8 +406,15 @@ section {
     padding-right: 32px;
 }
 
+.clients-logo-link {
+    display: flex;
+    width: 106px;
+    height: 60px;
+}
+
 .clients-logo {
     display: block;
+    margin: auto;
     fill: #AFB1B8;
 }
 
