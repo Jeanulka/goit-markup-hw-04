@@ -170,6 +170,7 @@ section {
 .icon-mail,
 .icon-phone {
     margin-right: 10px;
+    fill: var(--text-color);
 }
 
 .nav-contacts-link:focus,
@@ -195,10 +196,10 @@ section {
 
 /* Section Hero */
 .hero {
-    /* max-width: 1600px;
-    height: 600px;
+    max-width: 1600px;
+    /* height: 600px; */
     margin-left: auto;
-    margin-right: auto; */
+    margin-right: auto;
 
     background-color: #C4C4C4;
     ;
@@ -290,18 +291,14 @@ section {
 
 .features-list-item .icon {
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 120px;
     margin-bottom: 30px;
     border-radius: 4px;
     background-color: var(--background-third-color);
 }
 
-.icon-antenna,
-.icon-clock,
-.icon-diagram,
-.icon-astronaut {
-    margin: auto;
-}
 
 /* Section What we do */
 .what-we-do .list {
@@ -361,15 +358,18 @@ section {
 .team .member-social {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 32px;
-    margin-right: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
 
     justify-content: space-between;
 }
 
 .social-link {
-    display: block;
-    padding: 12px;
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
 }
 
@@ -398,18 +398,18 @@ section {
 
 .clients-icon-item {
     background-color: transparent;
-    border-radius: 4px;
-    border: 1px solid #AFB1B8;
-    padding-top: 16px;
-    padding-left: 32px;
-    padding-bottom: 16px;
-    padding-right: 32px;
 }
 
 .clients-logo-link {
     display: flex;
-    width: 106px;
-    height: 60px;
+    width: 170px;
+    height: 92px;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+    border: 1px solid #AFB1B8;
 }
 
 .clients-logo {
@@ -418,13 +418,13 @@ section {
     fill: #AFB1B8;
 }
 
-.clients-icon-item:hover,
-.clients-icon-item:focus {
+.clients-logo-link:hover,
+.clients-logo-link:focus {
     border-color: #188CE8;
 }
 
-.clients-icon-item:hover .clients-logo,
-.clients-icon-item:focus .clients-logo {
+.clients-logo-link:hover .clients-logo,
+.clients-logo-link:focus .clients-logo {
     fill: #188CE8;
 }
 
@@ -477,8 +477,12 @@ section {
     margin-bottom: 30px;
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus {
+.portfolio-link {
+    display: block;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
