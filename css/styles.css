@@ -413,8 +413,6 @@ section {
 }
 
 .clients-logo {
-    display: block;
-    margin: auto;
     fill: #AFB1B8;
 }
 
@@ -447,6 +445,7 @@ section {
     padding-left: 22px;
     padding-right: 22px;
     border: none;
+    border-radius: 4px;
     background-color: var(--background-third-color);
     font-weight: 500;
     line-height: 1.63;
@@ -458,6 +457,9 @@ section {
 .portfolio-filter-button:active {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
 }
 
 /* Портфоліо приклади робіт */
@@ -571,7 +573,7 @@ footer {
 .footer .join-us {
     margin-bottom: 20px;
     color: var(--secondary-color);
-    font-weight: 700px;
+    font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.42px;
     text-transform: uppercase;
